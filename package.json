@@ -1,6 +1,6 @@
 {
   "name": "mrmr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Murmur3 for javascript",
   "keywords": [
     "murmur3"
