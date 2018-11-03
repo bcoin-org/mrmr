@@ -25,7 +25,7 @@ NAN_METHOD(murmur3_sum) {
 
   const uint8_t *data = (const uint8_t *)node::Buffer::Data(buf);
   size_t len = node::Buffer::Length(buf);
-  uint32_t seed = info[1]->Uint32Value();
+  uint32_t seed = Nan::To<uint32_t>(info[1]).FromJust();
 
   info.GetReturnValue().Set(
     Nan::New<v8::Uint32>(mrmr_murmur3_sum(data, len, seed)));
@@ -48,8 +48,8 @@ NAN_METHOD(murmur3_tweak) {
 
   const uint8_t *data = (const uint8_t *)node::Buffer::Data(buf);
   size_t len = node::Buffer::Length(buf);
-  uint32_t n = info[1]->Uint32Value();
-  uint32_t tweak = info[2]->Uint32Value();
+  uint32_t n = Nan::To<uint32_t>(info[1]).FromJust();
+  uint32_t tweak = Nan::To<uint32_t>(info[2]).FromJust();
 
   info.GetReturnValue().Set(
     Nan::New<v8::Uint32>(mrmr_murmur3_tweak(data, len, n, tweak)));
