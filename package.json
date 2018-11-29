@@ -1,6 +1,6 @@
 {
   "name": "mrmr",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Murmur3 for javascript",
   "keywords": [
     "murmur3"
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "bindings": "~1.3.1",
-    "bsert": "~0.0.4",
+    "bsert": "~0.0.5",
     "nan": "~2.11.1"
   },
   "devDependencies": {
