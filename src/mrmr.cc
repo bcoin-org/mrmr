@@ -60,4 +60,4 @@ NAN_MODULE_INIT(init) {
   Nan::Export(target, "murmur3_tweak", murmur3_tweak);
 }
 
-NODE_MODULE(mrmr, init)
+NAN_MODULE_WORKER_ENABLED(mrmr, init)
