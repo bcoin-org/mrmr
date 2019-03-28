@@ -60,4 +60,8 @@ NAN_MODULE_INIT(init) {
   Nan::Export(target, "murmur3_tweak", murmur3_tweak);
 }
 
+#if NODE_MAJOR_VERSION >= 10
 NAN_MODULE_WORKER_ENABLED(mrmr, init)
+#else
+NODE_MODULE(mrmr, init)
+#endif
