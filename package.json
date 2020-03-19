@@ -14,7 +14,7 @@
   "author": "Christopher Jeffrey <chjjeffrey@gmail.com>",
   "main": "./lib/mrmr.js",
   "scripts": {
-    "install": "node-gyp rebuild || echo 'Build failed.'",
+    "install": "node-gyp rebuild",
     "lint": "eslint lib/ test/ || exit 0",
     "test": "bmocha --reporter spec test/*-test.js"
   },
