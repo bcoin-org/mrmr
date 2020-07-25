@@ -5,6 +5,7 @@
 cmake_minimum_required(VERSION 3.4)
 project(mrmr LANGUAGES C)
 
+include(NodeJS)
 include(TestBigEndian)
 
 set(CMAKE_C_STANDARD_REQUIRED ON)
